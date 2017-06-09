@@ -1,0 +1,7 @@
+vod_itv_base:
+    country: '%itv_country%'
+    product: '%itv_product%'
+    cdn_url: '%itv_cdn_url%'
+    version: '%itv_version%'
+    logout_target: 'logout'
+    debug: "%kernel.debug%"

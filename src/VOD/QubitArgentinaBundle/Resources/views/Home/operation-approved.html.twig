@@ -1,0 +1,66 @@
+{% extends 'VODBaseBundle:Base/Wrappers:wrapper-landing.html.twig' %}
+
+{% block data_locked %}{% endblock data_locked %} 
+
+{% trans_default_domain 'user' %}
+
+{% block head %}
+    {% embed 'VODBaseBundle:Base/Components/Header:head.html.twig' %}
+    {% endembed %}
+{% endblock head %}
+
+{% block body_class %}{% if not is_mobile %}{% endif%}{% endblock body_class %}
+
+{% block pixel_codes %}
+	{% include 'VODBaseBundle:Base/Components/Scripts:google-pixel-code-resultado-operacion.html.twig' %}
+{% endblock pixel_codes %}
+
+{% block custom_javascript %}
+	<script>
+		$(document).ready(function() {
+			$.fn.operationConfirmationPush({{ app.user.userNumber }}, 0, '{{ operator_code }}', {'id': '{{ productId }}', 'displayPrice': {{ productPrice }}, name: '{{ productName }}'}, false);
+		});
+	</script>
+{% endblock custom_javascript %}
+
+{% block body_container %}
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center mb-20">
+				<h1>¡Bienvenidos Qubit tv!</h1>
+				<h2>Ya podés ver las mejores películas donde quieras.</h3>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-sm-offset-3">
+				<div class="block-info">
+					<strong>Información de tu cuenta:</strong>
+					<ul>
+						<li>Tu email de inicio de sesión: cvaras@qubit.tv</li>
+						<li>Precio: $90 (el primer cargo se generará el 18 de octubre)</li>
+						<li>Formade pago: Tarjeta VISA terminada en 1242</li>
+					</ul>
+				</div>
+				<a class="btn btn-primary btn-medium-center fix-mobile mb-30" href="">Elegir película</a>
+				<h3 class="text-center">Encontranos en todos tus dispositivos</h3>
+				<div class="block-logos">
+					<div class="col-xs-6 col-sm-6">
+						<a href="https://play.google.com/store/apps/details?id=tv.qubit.android.player" class="play-store-logo" target="_blank">
+							<img src="{{cdn_url~'/images/common/play-store-logo.png'}}" width="100%" height="auto" alt="">
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-6">
+						<a href="https://itunes.apple.com/ar/app/qubittv/id926302652?mt=8" class="play-store-logo" target="_blank">
+							<img src="{{cdn_url~'/images/common/app-store-logo.png'}}" width="100%" height="auto" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="displays-approved">
+					<img src="{{cdn_url~'/images/common/displays.png'}}" alt="Disfrutá de Qubit en todos tus dispositivos" width="100%" height="auto" class="img-responsive">
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block footer_container %}
+   {% include 'VODBaseBundle:Base/Components/Footer:footer-lite.html.twig' %}
+{% endblock footer_container %}

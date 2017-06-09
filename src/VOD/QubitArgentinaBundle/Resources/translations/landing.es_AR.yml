@@ -1,0 +1,4 @@
+landing:
+  hero:
+    list:
+        first: '<strong>Primer mes de suscripción gratis</strong>, luego %price% final por mes.<sup>*</sup>'

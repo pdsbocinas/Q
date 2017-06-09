@@ -1,0 +1,4 @@
+movistar:
+    error:
+        101: 'La linea ingresada no tiene suscripción activa.'
+        039: 'El usuario ya está registrado, por favor ingrese otro email.'

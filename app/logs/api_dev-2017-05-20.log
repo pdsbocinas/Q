@@ -1,0 +1,2 @@
+[2017-05-20 19:01:09] api.INFO: A Curl Service request was executed. LogCode: c6d00b4a. {"LogCode":"c6d00b4a","ApiEndpoint":"user/check","Params":"Username=psanchez%40qubit.tv","ProfileId":null} []
+[2017-05-20 19:01:40] api.INFO: A Curl Service request was executed. LogCode: d1eef4fc. {"LogCode":"d1eef4fc","ApiEndpoint":"user/check","Params":"Username=psanchez%40qubit.tv","ProfileId":null} []

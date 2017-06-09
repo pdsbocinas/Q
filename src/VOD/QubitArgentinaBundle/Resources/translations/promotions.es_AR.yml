@@ -1,0 +1,18 @@
+promotions:
+    title: 'Promociones'
+    info: 'Ingresar cupón o promoción'
+    label: 'Seleccioná tu promoción'
+    confirm: '¡Listo! Se aplicó tu cupón / promoción'
+    clarin:
+        label: 'Clarín 365 10 % - Clarín 365 Plus 20 %'
+        info: 'Ingresar cupón o promoción'
+        disclaimer: 'No disponible abonando con Movistar'
+        suscription_resumee: 'Plan Mensual con descuento Clarín 365 %category% %price%.'
+        label_resumee: '%benefit%% de descuento Tarjeta Clarín 365 %category%'
+        plus_rate: '20'
+        classic_rate: '10'
+        form:
+            number_card_placeholder: 'Ingresá el número de tu tarjeta Clarin 365'
+            number_card_max_validation: 'La credencial ingresada debe tener 19 dígitos.'
+            number_card_numeric_validation: 'El valor ingresado debe ser numérico.'
+            no_blank_validation: 'Ingresá el número de tu tarjeta'

@@ -1,0 +1,21 @@
+imports:
+    - { resource: config.yml }
+
+#monolog:
+#    handlers:
+#        main:
+#            type: fingers_crossed
+#            action_level: critical
+#            handler: grouped
+#        grouped:
+#            type: group
+#            members: [streamed, loggly]
+#        streamed:
+#            type: stream
+#            path: "%kernel.logs_dir%/%kernel.environment%.log"
+#            level: debug
+#        loggly:
+#            type: loggly
+#            level: debug
+#            token: '%loggly_token%'
+#            tags: 'qubit-web-ar'

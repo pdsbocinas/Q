@@ -1,0 +1,12 @@
+vod_qubit_argentina:
+    resource: "@VODQubitArgentinaBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+vod_itv_base_bundle:
+    resource: "@VODItvBaseBundle/Resources/config/routing.xml"
+    prefix: /itv/
+
+vod_base_bundle:
+    resource: "@VODBaseBundle/Resources/config/routing.xml"
+    prefix: /

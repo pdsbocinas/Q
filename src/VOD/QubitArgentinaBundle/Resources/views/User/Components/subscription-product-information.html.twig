@@ -1,0 +1,25 @@
+{% trans_default_domain 'user' %}
+<div class="product">
+	{% if not app.user.hasPaidProduct %}
+	    {% set subscription = 'user.subscription.no_subscription' | trans %}
+	{% else %}
+	    {% set price = app.user.product.price|number_format(currency_decimals, ',', '.') %}
+	    {% set formatedPrice = 'common.currency_symbol'| trans({}, 'common') ~ ' ' ~ price %}
+	    {% set subscription = 'user.subscription.type' | trans({'%product%': app.user.product.name, '%price%': formatedPrice}) %}
+	    {# Clarin #}
+	        {% if app.user.channelUpMode == 'clarin365' or app.user.channelUpMode == 'clarin365plus' %}
+	            {% set category = '' %}
+	            {% if app.user.channelUpMode == 'clarin365' %}
+	                {% set classicPrice = price - (price * 'promotions.clarin.classic_rate' |trans({}, 'promotions')/100) %}
+	                {% set formatedPrice = 'common.currency_symbol' | trans({}, 'common') ~ ' ' ~ classicPrice |number_format(currency_decimals, ',', '.') %}
+	            {% elseif app.user.channelUpMode == 'clarin365plus' %}
+	                {% set plusPrice = price - (price * 'promotions.clarin.plus_rate' |trans({}, 'promotions')/100) %}
+	                {% set category = 'Plus' %}
+	                {% set formatedPrice = 'common.currency_symbol' | trans({}, 'common') ~ ' ' ~ plusPrice |number_format(currency_decimals, ',', '.') %}
+	            {% endif %}
+	            {% set subscription = 'promotions.clarin.suscription_resumee' | trans({'%category%': category, '%price%': formatedPrice}, 'promotions') %}
+	        {% endif %}
+	    {# fin clarin #}
+	{% endif %}
+	<p>{{- subscription -}}</p>
+</div>

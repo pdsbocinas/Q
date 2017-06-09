@@ -1,0 +1,31 @@
+@import "vod_app.scss";
+@import "variables.scss";
+@import "vod_landing.scss";
+
+/*payment 365*/
+.promo-365-payment {
+	background-image: url($img-cdn-prod-url + '/qubit-ar/bg-clarin.png');
+	background-repeat: no-repeat;
+	max-height: 126px;
+	border-radius: 5px;
+	margin-top: 25px;
+	padding: 15px 0;
+
+	.promo-365-payment_card {
+		@media (min-width: 480px) and (max-width: $screen-sm-min) {
+			max-width: 130px;
+		}
+	}
+
+	.promo365-text {
+		font-size: 0.590em;
+
+        @media (min-width: $screen-md-min) {
+          font-size: 0.875em;
+        }
+
+		// strong {
+		// 	display: block;
+		// }
+	}
+}

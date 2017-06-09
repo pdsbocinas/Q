@@ -1,0 +1,92 @@
+{% extends 'VODBaseBundle:Base/Wrappers:wrapper-falopa.html.twig' %}
+
+{% trans_default_domain 'user' %}
+
+{% block body_container %}
+	<div class="container-wrapper">
+		<div class="row">
+			<div class="col-sm-6 col-sm-offset-3">
+				<h2>{{ 'user.subscription.movistar.title' | trans | raw }}</h2>
+				{% set information = 'user.subscription.movistar.subtitle-register-free' | trans | raw %}
+				{% if hasxmsisdn %}
+					{% set information = 'user.subscription.movistar.subtitle-register'  | trans | raw %}
+				{% endif %}
+				<h3>{{ information }}</h3>
+
+				<div class="row">
+					<div class="col-sm-9">
+						{{ form_start(form, {'attr': {'novalidate': 'novalidate', 'id': form.vars.id}}) }}
+						{{ form_widget(form._token) }}
+							<div class="form-group">
+								{{ form_widget(form.phone, {'attr': {'placeholder': 'user.subscription.movistar.placeholders.number' | trans, 'class':'form-control onlyInput'}}) }}
+								{% for error in form.phone.vars.errors %}
+									<p class="text-danger error bold back">{{ error.message | raw }}</p>
+								{% endfor %}
+							</div>
+
+							<div class="form-group">
+								{{ form_widget(form.username, {'attr': {'placeholder': 'user.subscription.movistar.placeholders.email' | trans, 'class':'form-control onlyInput', 'autocomplete':'off'}}) }}
+								{% for error in form.username.vars.errors %}
+									<p class="text-danger error bold back">{{ error.message | raw }}</p>
+								{% endfor %}
+							</div>
+
+							{# Contraseña #}
+							<div class="form-group form-group_alter">
+								{{ form_widget(form.password, {'attr': {'placeholder': 'user.subscription.movistar.placeholders.password' | trans, 'class':'form-control'}}) }}
+								{% if is_mobile %}<i class="fa fa-eye"></i>{% endif %}
+								{% for error in form.password.vars.errors %}
+									<p class="text-danger error bold back">{{ error.message }}</p>
+								{% endfor %}
+							</div>
+
+							{# Captcha #}
+							<div class="form-group">
+								{{ form_widget(form.recaptcha) }}
+								{% for error in form.vars.errors %}
+									<p class="text-danger error bold back">{{ error.message }}</p>
+								{% endfor %}
+							</div>
+
+							{# Botón Continuar #}
+							<div class="form-group">
+								{{ form_widget(form.save, {'attr': {'class': 'btn btn-primary btn-lg mb-30'}}) }}
+							</div>
+						{{ form_end(form) }}
+						<p class="disclaimer">{{ 'user.subscription.movistar.disclaimer' | trans({'%price%': defaultPrice()}) | raw }}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    {% block error_container %}
+        {% if (error)  %}
+            {% set errorKey = 'movistar.error.' ~ error.errorCode %}
+            {% include 'VODBaseBundle:Components/Modal:generic-modal.html.twig' with {
+                'crazyId': 'subscription-modal',
+                'crazyText': errorKey | trans([], 'movistar'),
+                'acceptButton': true,
+                'cancelButton': false,
+                'acceptButtonAction': 'javascript:$("#subscription-modal").modal("hide")' | raw
+            } %}
+        {% endif %}
+    {% endblock error_container %}
+{% endblock %}
+
+{% block custom_javascript %}
+    {{ parent() }}
+    <script src="//www.google.com/recaptcha/api.js?hl={{ app.request.locale }}"></script>
+    <script>
+        $('#subscription-modal').modal('show');
+
+        $('#{{ form.vars.id }}').validate({
+            errorClass: 'text-danger error bold',
+            errorElement: 'p',
+            onkeyup: true,
+        });
+    </script>
+{% endblock custom_javascript %}
+
+{% block footer_container %}
+    {% include 'VODBaseBundle:Base/Components/Footer:footer-lite.html.twig' %}
+{% endblock footer_container %}

@@ -1,0 +1,17 @@
+{% trans_default_domain 'base' %}
+
+{% block info_afip %}
+
+	{% set divClass = 'col-xs-4 text-right' %}
+
+	{% if is_mobile %}
+		{% set divClass = 'col-xs-2 	col-sm-2 text-right' %}
+	{% endif %}
+
+	<div class="{{- divClass -}}">
+		​<a class="data-fiscal" href="http://qr.afip.gob.ar/?qr=hNNJtZCgjtvQq5LlWKnDyQ,," target="_F960AFIPInfo">
+			<img src="//www.afip.gob.ar/images/f960/DATAWEB.jpg" border="0">
+		</a>​
+	</div>
+
+{% endblock info_afip %}

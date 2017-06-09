@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="columns">
+                <div class="column is-three-quarters">
+                    <form action="http://quruso.qubit.tv/v1/play/buy" method="POST">
+
+                        <div class="field">
+                            <label for="uuid" class="label">Uuid</label>
+                            <p class="control">
+                                <span class="select">
+                                    <select name="uuid">
+                                        {% for content in contents %}
+                                            <option value="{{ content.uuid }}">{{ content.title }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </span>
+                            </p>
+                        </div>
+
+                        <div class="field">
+                            <label for="hash" class="label">Autologin hash</label>
+                            <p class="control">
+                                <input type="text" name="hash" value="{{ autologin_hash }}" class="input" readonly />
+                            </p>
+                        </div>
+
+                        <div class="field">
+                            <label for="operator" class="label">Operator</label>
+                            <p class="control">
+                                <input type="text" name="operator" value="qubit" class="input" readonly />
+                            </p>
+                        </div>
+
+                        <div class="field">
+                            <label for="">Quality</label>
+                            <p class="control">
+                                <label class="radio">
+                                    <input type="radio" name="quality" value="HD" checked>
+                                    HD
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="quality" value="SD">
+                                    SD
+                                </label>
+                            </p>
+                        </div>
+
+                        <div class="field">
+                            <label for="">Streaming type</label>
+                            <p class="control">
+                                <label class="radio">
+                                    <input type="radio" name="stream" value="dash" checked>
+                                    Dash
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="stream" value="playready">
+                                    Playready
+                                </label>
+                            </p>
+                        </div>
+
+                        <div class="field">
+                            <label for="username" class="label">Username</label>
+                            <p class="control">
+                                <input type="text" name="username" value="{{ username }}" class="input" readonly />
+                            </p>
+                        </div>
+
+                        <div class="field is-grouped">
+                            <p class="control">
+                                <button class="is-primary" type="submit">Ir al player</button>
+                            </p>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

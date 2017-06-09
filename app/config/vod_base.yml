@@ -1,0 +1,63 @@
+vod_base:
+    gtm_currency_code: 'ARS'
+    operator_code: '%operator_code%'
+    facebook_application_id: '%facebook_app_id%'
+    twitter_user: 'qubittv'
+    cdn_url: '%cdn_url%'
+    enabled_countries: ['AR']
+    disabled_routes:
+        catfish_banner:
+            - promotion_and_subscription
+    bg_images: 21
+    youbora_account_id: '%youbora_account_id%'
+    logs:
+        loggly_token: "%loggly_token%"
+        loggly_tag: "qubit-web-ar"
+    video:
+        js_url:
+            shaka_url: '%shaka_js_url%'
+            hls_url: '%hls_js_url%'
+            hls_ie: '%hls_js_ie%'
+        css_url:
+            player: '%player_css_url%'
+            qubit: '%qubit_css_url%'
+            thumbnails: '%thumbnails_css_url%'
+    client:
+        api_url: '%api_url%'
+        api_apk: '9088-697E'
+        api_secret: '5fd2a7181825445eabd5edfdee1345baab942b2902c42'
+    payment_methods:
+        global_collect:
+            configuration:
+                merchant_id: 552
+                api_key_id: '%global_collect.api_key%'
+                secret_api_key: '%global_collect.secret_api_key%'
+                base_url: '%global_collect.base_url%'
+                countryCode: AR
+                currencyCode: ARS
+                environment: '%global_collect.environment%'
+        movistar:
+            configuration:
+                id_service:     '%movistar.id_service%'
+                id_service_try: '%movistar.id_service_try%'
+                user:           '%movistar.user%'
+                pass:           '%movistar.pass%'
+    google_services:
+        tag_manager_auth: '%google_gtm_auth%'
+        tag_manager_preview: '%google_gtm_preview%'
+        tag_manager_code: '%google_gtm_code%'
+    vendors:
+        lsw_memcache:
+            session:
+                pool: session
+                prefix: "session_"
+            pools:
+                session:
+                    servers:
+                        - { host: '%memcache.session_pool.host%', tcp_port: %memcache.session_pool.port% }
+                default:
+                    servers:
+                        - { host: '%memcache.default_pool.host%', tcp_port: %memcache.default_pool.port% }
+                potential:
+                    servers:
+                        - { host: "localhost", tcp_port: 11211 }

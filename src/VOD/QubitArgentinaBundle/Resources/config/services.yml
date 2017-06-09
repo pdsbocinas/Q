@@ -1,0 +1,34 @@
+services:
+    clarin.webservice.client:
+        class: VOD\QubitArgentinaBundle\Services\Clarin\ClarinClient
+        arguments:
+            - '%vod_base.clarin_webservice_url%'
+    vod_base.form.payment: # Este es el formulario PaymentType que extiende del base, redefino el servicio porque en QubitArgentina necesito injectarle el servicio translator
+        class: VOD\QubitArgentinaBundle\Form\Type\PaymentType
+        arguments:
+            - '@translator'
+            - '@vod_base.utils_client'
+            - '@security.token_storage'
+            - '@vod_base.user_client'
+        tags:
+            - { name: form.type, alias: 'vod_base_payment_form' }
+
+    vod_base.payment: # Extiende de PaymentService de BaseBundle, se redefine para agregar ordenamiento de Gateways para movistar
+        class: VOD\QubitArgentinaBundle\Services\Payment\PaymentService
+        scope: request
+        arguments:
+            - '@form.factory'
+            - '@security.token_storage'
+            - '@session'
+
+    movistar.provision.client:
+        class: VOD\QubitArgentinaBundle\Services\Client\Movistar\MovistarClient
+        arguments:
+            - '@ci.restclient'
+            - '@vod_base.utilities.cache'
+            - '@monolog.logger.api'
+        calls:
+            - [setOption, ['api_url', '%vod_base.api_url%']]
+            - [setOption, ['api_apk', '%vod_base.api_apk%']]
+            - [setOption, ['api_secret', '%vod_base.api_secret%']]
+

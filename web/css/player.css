@@ -1,0 +1,455 @@
+@charset "UTF-8";
+
+/*
+ *
+ * NOTE: only the variables that will be overwritten by operator specific styles should have the !default tag.
+ */
+
+/**
+	-------------------
+	Images (Powered by Qubit CDN ;) )
+	Take special attention to the "st" at the start of the URL. This is the "staging" CDN?
+	Also, we can have per environment image, like:
+	In staging we have a logo, but in production we have another one, so, we need to parametrize this and overwrite it if we need in our project custom .scss file
+	-------------------
+	*/
+
+/* Common CDN url */
+
+/*$img-cdn-prod-url:               '//st.qubit.tv/assets/public/qubit/prod/images' !default;
+$fonts-cdn-prod-url:             '//st.qubit.tv/assets/public/qubit/prod/fonts';*/
+
+/* Generic backgrounds [app/components/_backgrounds.scss] */
+
+/* Errors backgrounds  [app/components/_backgrounds.scss] */
+
+/* Deeplinking landing [app/components/_grid.scss] */
+
+/* ITV landing [app/components/_itv_grid.scss] */
+
+/* Welcome landing [app/components/_landing.scss] */
+
+/* Navs [app/components/_navs.scss] */
+
+/* Sliders [app/components/_slider.scss] */
+
+/* Carousel items [app/components/_carousel.scss]*/
+
+/* Forms */
+
+/* [app/components/_images.scss] */
+
+/* [app/components/_input-groups.scss] */
+
+/* Navbar profile [app/components/_nav-fixed-left.scss] */
+
+/* Popovers [app/widget/_popovers.scss] */
+
+/* Logo */
+
+/* Popover */
+
+/* Colors
+ * ---------------------
+ */
+
+/* Basic Naming Colors
+ * ---------------------
+ * To find an appropriate name, please visit: http://chir.ag/projects/name-that-color/
+ */
+
+/* Social network colors */
+
+/* Main colors */
+
+/* For opacity/transparency purposes */
+
+/* Colors for carousel array. You can add or remove as many colors as you want,
+	then you have to add or remove them from the array. */
+
+/* Scaffolding - The global styles
+ * ---------------------
+ */
+
+/* Typography
+ * ---------------------
+ */
+
+/* Basic Qubit Fonts */
+
+/* Defining fonts */
+
+/* Buttons
+ * ---------------------
+ */
+
+/* Navs
+ * ---------------------
+ */
+
+/* Navbar
+ * ---------------------
+ */
+
+/* Carousel
+ * ---------------------
+ */
+
+/* Carousel Items
+ * ---------------------
+ */
+
+/* Footer
+ * ---------------------
+ */
+
+/* Dropdowns
+ * ---------------------
+ */
+
+/* User Options
+ * ---------------------
+ */
+
+/* User Profile
+ * ---------------------
+ */
+
+/* Change Groups
+ * ---------------------
+ */
+
+/* Loading effect
+ * ---------------------
+ */
+
+/* Media
+ * ---------------------
+ */
+
+/* Media actions
+ * ---------------------
+ */
+
+/* Ratings
+ * ---------------------
+ */
+
+/* Modals
+ * ---------------------
+ */
+
+/* Form-control (Inputs)
+ *----------------------
+ */
+
+/* Textarea
+ * ---------------------
+ */
+
+/* Plans
+ * ---------------------
+ */
+
+/* Popovers
+ * ---------------------
+ */
+
+/* Icons
+ * ---------------------
+ */
+
+/* Wells
+ * ---------------------
+ */
+
+/* Control parental */
+
+/** Alerts
+ *-------------------
+ */
+
+/** Header Mobile
+ *-------------------
+ */
+
+/** Catfish
+ *-------------------
+ */
+
+/** Error pages
+ *-------------------
+ */
+
+/** Deep linking landing page
+ *-------------------
+ */
+
+/** Trailers
+ *-------------------
+ */
+
+/* Progress Bar */
+
+/* Fonts */
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url("//stcloudfront.qubit.tv/assets/public/staging/qubit/fonts/roboto/roboto-regular.eot");
+  src: url("//stcloudfront.qubit.tv/assets/public/staging/qubit/fonts/roboto/roboto-regular.eot?#iefix") format("embedded-opentype"), url("//stcloudfront.qubit.tv/assets/public/staging/qubit/fonts/roboto/roboto-regular.woff2") format("woff2"), url("//stcloudfront.qubit.tv/assets/public/staging/qubit/fonts/roboto/roboto-regular.woff") format("woff"), url("//stcloudfront.qubit.tv/assets/public/staging/qubit/fonts/roboto/roboto-regular.ttf") format("truetype"), url("//stcloudfront.qubit.tv/assets/public/staging/qubit/fonts/roboto/roboto-regular.svg#roboto-regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url("//stcloudfront.qubit.tv/assets/public/staging/qubit/fonts/roboto/roboto-medium.eot");
+  src: url("//stcloudfront.qubit.tv/assets/public/staging/qubit/fonts/roboto/roboto-medium.eot?#iefix") format("embedded-opentype"), url("//stcloudfront.qubit.tv/assets/public/staging/qubit/fonts/roboto/roboto-medium.woff2") format("woff2"), url("//stcloudfront.qubit.tv/assets/public/staging/qubit/fonts/roboto/roboto-medium.woff") format("woff"), url("//stcloudfront.qubit.tv/assets/public/staging/qubit/fonts/roboto/roboto-medium.ttf") format("truetype"), url("//stcloudfront.qubit.tv/assets/public/staging/qubit/fonts/roboto/roboto-medium.svg#roboto-medium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Condensed';
+  src: url("//stcloudfront.qubit.tv/assets/public/staging/qubit/fonts/roboto/roboto-condensed.eot");
+  src: url("//stcloudfront.qubit.tv/assets/public/staging/qubit/fonts/roboto/roboto-condensed.eot?#iefix") format("embedded-opentype"), url("//stcloudfront.qubit.tv/assets/public/staging/qubit/fonts/roboto/roboto-condensed.woff2") format("woff2"), url("//stcloudfront.qubit.tv/assets/public/staging/qubit/fonts/roboto/roboto-condensed.woff") format("woff"), url("//stcloudfront.qubit.tv/assets/public/staging/qubit/fonts/roboto/roboto-condensed.ttf") format("truetype"), url("//stcloudfront.qubit.tv/assets/public/staging/qubit/fonts/roboto/roboto-condensed.svg#roboto-condensed") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Condensed-Light';
+  src: url("//stcloudfront.qubit.tv/assets/public/staging/qubit/fonts/roboto/roboto-condensed.woff2") format("woff2"), url("//stcloudfront.qubit.tv/assets/public/staging/qubit/fonts/roboto/roboto-condensed.woff") format("woff"), url("//stcloudfront.qubit.tv/assets/public/staging/qubit/fonts/roboto/roboto-condensed.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "slick";
+  src: url("//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/fonts/slick.eot?#iefix") format("embedded-opentype"), url("//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/fonts/slick.woff") format("woff"), url("//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/fonts/slick.ttf") format("truetype"), url("//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/fonts/slick.svg#slick") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.eot");
+  src: url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.eot") format("embedded-opentype"), url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.woff2") format("woff2"), url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.woff") format("woff"), url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.ttf") format("truetype"), url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.svg#fontawesome") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.vjs-dashjs-hide-errors .vjs-error-display {
+  display: none !important;
+}
+
+.vjs-icon-captions:before,
+.video-js .vjs-captions-button:before {
+  content: "";
+}
+
+video,
+#my_video,
+.video-js,
+.vjs-default-skin {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+.vjs-big-play-centered .vjs-big-play-button {
+  display: none;
+}
+
+.vjs-dashjs-hide-errors .vjs-error-display {
+  display: none !important;
+}
+
+.vjs-big-play-button {
+  display: none !important;
+}
+
+.video-js .vjs-control-bar {
+  width: 90%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 3em;
+  background-color: black;
+}
+
+.video-js .vjs-progress-holder {
+  height: 0.2em;
+}
+
+.video-js .vjs-progress-holder .vjs-play-progress,
+.video-js .vjs-progress-holder .vjs-load-progress,
+.video-js .vjs-progress-holder .vjs-load-progress div {
+  height: 0.2em;
+}
+
+/* lang selector */
+
+.vjs-lang-button {
+  float: right;
+  line-height: 3em;
+  text-align: justify !important;
+}
+
+/* Don't show hover effects on title */
+
+ul li.vjs-menu-title.vjs-lang-menu-title:hover {
+  cursor: default;
+  background-color: transparent;
+  color: white;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* Needed to keep text visible in video.js 4.9 */
+
+.vjs-lang-button .vjs-control-text {
+  width: auto;
+  height: auto;
+  clip: auto;
+  display: none;
+}
+
+.vjs-menu .vjs-menu-content {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicGxheWVyLmNzcyIsInNvdXJjZXMiOlsicGxheWVyLnNjc3MiXSwic291cmNlc0NvbnRlbnQiOlsiXHJcbi8vIFZhcmlhYmxlc1xyXG4kbG9jaG1hcmE6IHJnYmEoNiwxMjksMTgxLDEpOyBcdC8vICMwNjgxQjVcclxuJGNlcnVsZWFuOiByZ2JhKDAsMTkxLDI1NSwxKTtcdC8vICMwMGJmZmZcclxuJHdoaXRlOiByZ2JhKDI1NSwyNTUsMjU1LDEpO1x0Ly8gI2ZmZmZmZlxyXG4kYmxhY2s6IHJnYmEoMCwwLDAsMSk7XHRcdFx0Ly8gIzAwMDAwMFxyXG5cclxuJGJnLWNvbnRyb2wtYmFyOiAkYmxhY2s7XHJcbiRiZy1ldmVudHM6ICRsb2NobWFyYTtcclxuJGJnLWV2ZW50cy1ob3ZlcjogJGNlcnVsZWFuO1xyXG4kYmctZXZlbnRzLWZvY3VzOiAkd2hpdGU7XHJcblxyXG4udmpzLWRhc2hqcy1oaWRlLWVycm9ycyAudmpzLWVycm9yLWRpc3BsYXkge1xyXG5cdGRpc3BsYXk6bm9uZSAhaW1wb3J0YW50O1xyXG59XHJcblxyXG4udmpzLWJpZy1wbGF5LWJ1dHRvbiB7XHJcblx0ZGlzcGxheTogbm9uZSAhaW1wb3J0YW50O1xyXG59XHJcblxyXG4vLyAudmpzLWxvYWRpbmctc3Bpbm5lciB7XHJcbi8vIFx0Ym9yZGVyOiA2cHggc29saWQgJGNlcnVsZWFuO1xyXG4vLyB9XHJcblxyXG4udmlkZW8tanMge1xyXG5cdC52anMtY29udHJvbC1iYXIge1xyXG5cdFx0d2lkdGg6IDkwJTtcclxuXHRcdG1hcmdpbjogMCBhdXRvO1xyXG5cdFx0bGVmdDogMDtcclxuXHRcdHJpZ2h0OiAwO1xyXG5cdFx0Ym90dG9tOiAzZW07XHJcblx0XHRiYWNrZ3JvdW5kLWNvbG9yOiAkYmctY29udHJvbC1iYXI7XHJcblx0fVxyXG5cclxuXHQudmpzLXByb2dyZXNzLWhvbGRlciB7XHJcblx0XHRoZWlnaHQ6IDAuMmVtO1xyXG5cdFx0XHJcblx0XHQudmpzLXBsYXktcHJvZ3Jlc3MsIFxyXG5cdFx0LnZqcy1sb2FkLXByb2dyZXNzLCBcclxuXHRcdC52anMtbG9hZC1wcm9ncmVzcyBkaXYge1xyXG5cdFx0XHRoZWlnaHQ6IDAuMmVtO1xyXG5cdFx0fVxyXG5cdH1cclxuXHRcclxuXHQudmpzLXBsYXktcHJvZ3Jlc3MsXHJcblx0LnZqcy12b2x1bWUtbGV2ZWwge1xyXG5cdFx0YmFja2dyb3VuZC1jb2xvcjogJGJnLWV2ZW50cztcclxuXHR9XHJcblx0XHJcblx0LnZqcy1jb250cm9sOmJlZm9yZSxcclxuXHQudmpzLWljb24tY2lyY2xlOmJlZm9yZSwgXHJcblx0LnZqcy1tb3VzZS1kaXNwbGF5OmJlZm9yZSwgXHJcblx0LnZqcy1wbGF5LXByb2dyZXNzOmJlZm9yZSwgXHJcblx0LnZqcy12b2x1bWUtbGV2ZWw6YmVmb3JlIHtcclxuXHRcdGNvbG9yOiAkYmctZXZlbnRzO1xyXG5cdH1cclxuXHRcclxuXHQudmpzLWNvbnRyb2w6aG92ZXIsIC52anMtY29udHJvbDpob3ZlcjpiZWZvcmUsIFxyXG5cdC52anMtaWNvbi1jaXJjbGU6aG92ZXIsIC52anMtaWNvbi1jaXJjbGU6aG92ZXI6YmVmb3JlLFxyXG5cdC52anMtbW91c2UtZGlzcGxheTpob3ZlciwgLnZqcy1tb3VzZS1kaXNwbGF5OmhvdmVyOmJlZm9yZSxcclxuXHQudmpzLXBsYXktcHJvZ3Jlc3M6aG92ZXIsIC52anMtcGxheS1wcm9ncmVzczpob3ZlcjpiZWZvcmUsXHJcblx0LnZqcy12b2x1bWUtbGV2ZWw6aG92ZXIsIC52anMtdm9sdW1lLWxldmVsOmhvdmVyOmJlZm9yZSB7XHJcblx0XHRjb2xvcjogJGJnLWV2ZW50cy1ob3ZlcjtcclxuXHRcdHRleHQtc2hhZG93OiBub25lO1xyXG5cdH1cclxuXHJcblx0LnZqcy1jb250cm9sOmZvY3VzLCAudmpzLWNvbnRyb2w6Zm9jdXM6YmVmb3JlLCBcclxuXHQudmpzLWljb24tY2lyY2xlOmZvY3VzLCAudmpzLWljb24tY2lyY2xlOmZvY3VzOmJlZm9yZSxcclxuXHQudmpzLW1vdXNlLWRpc3BsYXk6Zm9jdXMsIC52anMtbW91c2UtZGlzcGxheTpmb2N1czpiZWZvcmUsXHJcblx0LnZqcy1wbGF5LXByb2dyZXNzOmZvY3VzLCAudmpzLXBsYXktcHJvZ3Jlc3M6Zm9jdXM6YmVmb3JlLFxyXG5cdC52anMtdm9sdW1lLWxldmVsOmJlZm9yZSwgLnZqcy12b2x1bWUtbGV2ZWw6Zm9jdXM6YmVmb3JlIHtcclxuXHRcdGNvbG9yOiAkYmctZXZlbnRzLWZvY3VzO1xyXG5cdFx0dGV4dC1zaGFkb3c6IG5vbmU7XHJcblx0fVxyXG5cdFxyXG59IFxyXG5cclxuLyogbGFuZyBzZWxlY3RvciAqL1xyXG4udmpzLWxhbmctYnV0dG9uIHtcclxuXHRmbG9hdDogcmlnaHQ7XHJcblx0bGluZS1oZWlnaHQ6IDNlbTtcclxuXHR0ZXh0LWFsaWduOiBqdXN0aWZ5ICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbi8qIERvbid0IHNob3cgaG92ZXIgZWZmZWN0cyBvbiB0aXRsZSAqL1xyXG51bCBsaS52anMtbWVudS10aXRsZS52anMtbGFuZy1tZW51LXRpdGxlOmhvdmVyIHtcclxuXHRjdXJzb3I6IGRlZmF1bHQ7XHJcblx0YmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XHJcblx0Y29sb3I6ICR3aGl0ZTtcclxuXHQtbW96LWJveC1zaGFkb3c6IG5vbmU7XHJcblx0LXdlYmtpdC1ib3gtc2hhZG93OiBub25lO1xyXG5cdGJveC1zaGFkb3c6IG5vbmU7XHJcbn1cclxuXHJcbi8qIE5lZWRlZCB0byBrZWVwIHRleHQgdmlzaWJsZSBpbiB2aWRlby5qcyA0LjkgKi9cclxuLnZqcy1sYW5nLWJ1dHRvbiAudmpzLWNvbnRyb2wtdGV4dCB7XHJcblx0d2lkdGg6IGF1dG87XHJcblx0aGVpZ2h0OiBhdXRvO1xyXG5cdGNsaXA6IGF1dG87XHJcbn1cclxuXHJcbi52anMtbWVudSB7XHJcblx0LnZqcy1tZW51LWNvbnRlbnQge1xyXG5cdFx0Zm9udC1mYW1pbHk6IHNhbnMtc2VyaWY7XHJcblx0XHRmb250LXdlaWdodDogYm9sZDtcclxuXHR9XHJcbn1cclxuIl0sIm1hcHBpbmdzIjoiQUFZQSx1QkFBdUIsQ0FBQyxrQkFBa0IsQ0FBQztFQUMxQyxPQUFPLEVBQUMsZUFBZ0IsR0FDeEI7O0FBRUQsb0JBQW9CLENBQUM7RUFDcEIsT0FBTyxFQUFFLGVBQWdCLEdBQ3pCOztBQU1ELFNBQVMsQ0FDUixnQkFBZ0IsQ0FBQztFQUNoQixLQUFLLEVBQUUsR0FBSTtFQUNYLE1BQU0sRUFBRSxNQUFPO0VBQ2YsSUFBSSxFQUFFLENBQUU7RUFDUixLQUFLLEVBQUUsQ0FBRTtFQUNULE1BQU0sRUFBRSxHQUFJO0VBQ1osZ0JBQWdCLEVBMUJWLEtBQUksR0EyQlY7O0FBUkYsU0FBUyxDQVVSLG9CQUFvQixDQUFDO0VBQ3BCLE1BQU0sRUFBRSxLQUFNLEdBT2Q7RUFsQkYsU0FBUyxDQVVSLG9CQUFvQixDQUduQixrQkFBa0I7RUFicEIsU0FBUyxDQVVSLG9CQUFvQixDQUluQixrQkFBa0I7RUFkcEIsU0FBUyxDQVVSLG9CQUFvQixDQUtuQixrQkFBa0IsQ0FBQyxHQUFHLENBQUM7SUFDdEIsTUFBTSxFQUFFLEtBQU0sR0FDZDs7QUFqQkgsU0FBUyxDQW9CUixrQkFBa0I7QUFwQm5CLFNBQVMsQ0FxQlIsaUJBQWlCLENBQUM7RUFDakIsZ0JBQWdCLEVBNUNQLE9BQUksR0E2Q2I7O0FBdkJGLFNBQVMsQ0F5QlIsWUFBWSxBQUFBLE9BQU87QUF6QnBCLFNBQVMsQ0EwQlIsZ0JBQWdCLEFBQUEsT0FBTztBQTFCeEIsU0FBUyxDQTJCUixrQkFBa0IsQUFBQSxPQUFPO0FBM0IxQixTQUFTLENBNEJSLGtCQUFrQixBQUFBLE9BQU87QUE1QjFCLFNBQVMsQ0E2QlIsaUJBQWlCLEFBQUEsT0FBTyxDQUFDO0VBQ3hCLEtBQUssRUFwREksT0FBSSxHQXFEYjs7QUEvQkYsU0FBUyxDQWlDUixZQUFZLEFBQUEsTUFBTSxFQWpDbkIsU0FBUyxDQWlDWSxZQUFZLEFBQUEsTUFBTSxBQUFBLE9BQU87QUFqQzlDLFNBQVMsQ0FrQ1IsZ0JBQWdCLEFBQUEsTUFBTSxFQWxDdkIsU0FBUyxDQWtDZ0IsZ0JBQWdCLEFBQUEsTUFBTSxBQUFBLE9BQU87QUFsQ3RELFNBQVMsQ0FtQ1Isa0JBQWtCLEFBQUEsTUFBTSxFQW5DekIsU0FBUyxDQW1Da0Isa0JBQWtCLEFBQUEsTUFBTSxBQUFBLE9BQU87QUFuQzFELFNBQVMsQ0FvQ1Isa0JBQWtCLEFBQUEsTUFBTSxFQXBDekIsU0FBUyxDQW9Da0Isa0JBQWtCLEFBQUEsTUFBTSxBQUFBLE9BQU87QUFwQzFELFNBQVMsQ0FxQ1IsaUJBQWlCLEFBQUEsTUFBTSxFQXJDeEIsU0FBUyxDQXFDaUIsaUJBQWlCLEFBQUEsTUFBTSxBQUFBLE9BQU8sQ0FBQztFQUN2RCxLQUFLLEVBM0RJLFdBQUk7RUE0RGIsV0FBVyxFQUFFLElBQUssR0FDbEI7O0FBeENGLFNBQVMsQ0EwQ1IsWUFBWSxBQUFBLE1BQU0sRUExQ25CLFNBQVMsQ0EwQ1ksWUFBWSxBQUFBLE1BQU0sQUFBQSxPQUFPO0FBMUM5QyxTQUFTLENBMkNSLGdCQUFnQixBQUFBLE1BQU0sRUEzQ3ZCLFNBQVMsQ0EyQ2dCLGdCQUFnQixBQUFBLE1BQU0sQUFBQSxPQUFPO0FBM0N0RCxTQUFTLENBNENSLGtCQUFrQixBQUFBLE1BQU0sRUE1Q3pCLFNBQVMsQ0E0Q2tCLGtCQUFrQixBQUFBLE1BQU0sQUFBQSxPQUFPO0FBNUMxRCxTQUFTLENBNkNSLGtCQUFrQixBQUFBLE1BQU0sRUE3Q3pCLFNBQVMsQ0E2Q2tCLGtCQUFrQixBQUFBLE1BQU0sQUFBQSxPQUFPO0FBN0MxRCxTQUFTLENBOENSLGlCQUFpQixBQUFBLE9BQU8sRUE5Q3pCLFNBQVMsQ0E4Q2tCLGlCQUFpQixBQUFBLE1BQU0sQUFBQSxPQUFPLENBQUM7RUFDeEQsS0FBSyxFQW5FQyxLQUFJO0VBb0VWLFdBQVcsRUFBRSxJQUFLLEdBQ2xCOztBQUlGLG1CQUFtQjtBQUNuQixnQkFBZ0IsQ0FBQztFQUNoQixLQUFLLEVBQUUsS0FBTTtFQUNiLFdBQVcsRUFBRSxHQUFJO0VBQ2pCLFVBQVUsRUFBRSxrQkFBbUIsR0FDL0I7O0FBRUQsdUNBQXVDO0FBQ3ZDLEVBQUUsQ0FBQyxFQUFFLEFBQUEsZUFBZSxBQUFBLG9CQUFvQixBQUFBLE1BQU0sQ0FBQztFQUM5QyxNQUFNLEVBQUUsT0FBUTtFQUNoQixnQkFBZ0IsRUFBRSxXQUFZO0VBQzlCLEtBQUssRUFwRkUsS0FBSTtFQXFGWCxlQUFlLEVBQUUsSUFBSztFQUN0QixrQkFBa0IsRUFBRSxJQUFLO0VBQ3pCLFVBQVUsRUFBRSxJQUFLLEdBQ2pCOztBQUVELGlEQUFpRDtBQUNqRCxnQkFBZ0IsQ0FBQyxpQkFBaUIsQ0FBQztFQUNsQyxLQUFLLEVBQUUsSUFBSztFQUNaLE1BQU0sRUFBRSxJQUFLO0VBQ2IsSUFBSSxFQUFFLElBQUssR0FDWDs7QUFFRCxTQUFTLENBQ1IsaUJBQWlCLENBQUM7RUFDakIsV0FBVyxFQUFFLFVBQVc7RUFDeEIsV0FBVyxFQUFFLElBQUssR0FDbEIiLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9 */
+
+.vjs-captions-button:before {
+  content: "" !important;
+}
+
+.vjs-dashjs-hide-errors .vjs-error-display {
+  display: none !important;
+}
+
+.vjs-big-play-button {
+  display: none !important;
+}
+
+video::cue {
+  background-color: transparent !important;
+  text-shadow: 1px 1px 0.5px black !important;
+}
+
+video {
+  visibility: hidden;
+}
+
+.video-js .vjs-tech {
+  visibility: visible;
+}
+
+.video-js .vjs-control-bar {
+  width: 90%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 3em;
+  background-color: rgba(8, 24, 40, 0.8);
+}
+
+.video-js .vjs-progress-holder {
+  height: 0.2em;
+}
+
+.video-js .vjs-progress-holder .vjs-play-progress,
+.video-js .vjs-progress-holder .vjs-load-progress,
+.video-js .vjs-progress-holder .vjs-load-progress div {
+  height: 0.2em;
+}
+
+/* lang selector */
+
+.vjs-lang-button {
+  float: right;
+  line-height: 3em;
+  text-align: justify !important;
+}
+
+/* Don't show hover effects on title */
+
+ul li.vjs-menu-title.vjs-lang-menu-title:hover {
+  cursor: default;
+  background-color: transparent;
+  color: white;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* Needed to keep text visible in video.js 4.9 */
+
+.vjs-lang-button .vjs-control-text {
+  width: auto;
+  height: auto;
+  clip: auto;
+}
+
+.vjs-menu .vjs-menu-content {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.video-js-title {
+  position: absolute;
+  font-family: 'Bebas-Bold', sans-serif;
+  top: 20px;
+  left: 20px;
+  z-index: 9999999999;
+  /* Nunca puse un z index tan alto, que barbaridad!!! */
+  color: white;
+  display: none;
+}
+
+.video-js-title .btn-back {
+  color: white;
+  padding: 0 20px;
+  font-size: 1.1em;
+}
+
+.video-js-title .btn-back:hover {
+  color: #ff6d00;
+}
+
+.btn-back,
+h1 {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+h1 {
+  margin: 0;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+}
+
+.vid1-dimensions {
+  width: 100% !important;
+  height: 100% !important;
+}
+/*# sourceMappingURL=player.css.map */

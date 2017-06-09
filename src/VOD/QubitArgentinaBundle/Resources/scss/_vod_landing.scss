@@ -1,0 +1,174 @@
+/*landing 365*/
+.clarin-promotion-hero {
+	background-image: url($img-bg-promo-landing-mobile);
+	background-attachment: scroll;
+	background-size: cover;
+	background-position: center center;
+
+	@media (min-width: $screen-sm-min) {
+		background-image: url($img-bg-promo-landing);
+		
+		&.hero {
+			height: 120vh;
+		}
+	}
+
+	.disclaimer {
+		@media screen and (max-width: $screen-sm-max) {
+			margin: 0 -40px;
+		}
+		text-align: center;
+	}
+
+	.logo-landing {
+		width: 115px;
+		float: right;
+		margin-top: 10px;
+		@media screen and (min-width: $screen-md-min) {
+			width: 180px;
+			margin-top: 0;
+			margin-right: 30px;
+		}
+	}
+
+	.promo-card {
+		float: left;
+		width: 50%;
+
+		@media screen and (min-width: $screen-md-min) {
+			width: 145px;
+			margin-right: 0;
+		}
+	}
+
+	.promo-discount {
+		color: $white;
+		text-align: left;
+		font-family: Bebas-Bold;
+		font-size: 42px;
+		line-height: 1;
+		display: block;
+
+		@media screen and (min-width: $screen-md-min) {
+			border-radius: 50%;
+			width: 91px;
+			height: 87px;
+			display: inline-block;
+			padding: 20px 0 0 0;
+			text-align: center;
+		}
+	}
+
+	.promo-discount-red {
+		background: #f90023; /* Old browsers */
+		background: -moz-linear-gradient(45deg,  #f90023 0%, #980008 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(45deg,  #f90023 0%,#980008 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(45deg,  #f90023 0%,#980008 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f90023', endColorstr='#980008',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	}
+
+	.promo-discount-grey {
+		background: #bcbdc1; /* Old browsers */
+		background: -moz-linear-gradient(45deg,  #bcbdc1 0%, #b8b9bc 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(45deg,  #bcbdc1 0%,#b8b9bc 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(45deg,  #bcbdc1 0%,#b8b9bc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bcbdc1', endColorstr='#b8b9bc',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	}
+
+	.promo-discount-label {
+		font-size: 0.850em;
+		font-family:  $font-family-base;
+
+		@media screen and (min-width: $screen-md-min){
+			display: inline-block;
+			max-width: 50%;
+			margin-left: 14px;
+			margin-right: 0;
+			font-family: $font-family-base;
+		}
+	}
+
+	.btn-primary {
+		margin-top: 1em;
+		margin-bottom: 1em;
+		@media screen and (min-width: $screen-md-min){
+			margin-bottom: 35px;
+			margin-top: 30px;
+		}
+	}
+
+	h1 {
+
+		@media screen and (min-width: $screen-md-min) {
+			margin-bottom: 30px;
+			margin-top: 30px;
+		}
+
+		@media screen and (min-width: 1265px) and (max-width: 1900px){
+			font-size: 3.750em;
+			margin-top: 107px;
+
+		}
+	}
+
+	h3 {
+
+		@media screen and (max-width: $screen-sm-max) {
+			margin-top: 0.5em;
+			margin-bottom: 1.5em;;
+		}
+	}
+
+	.promo-info {
+		float: left;
+		width: 59%;
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-right: -90px;
+	}
+
+	@media screen and (max-width: $screen-xlg-max){
+		ul li.featured-list-group_item {
+		    padding: 9px 0 0 65px;
+		    line-height: 1;
+		}	
+	}
+}
+
+.hero {
+
+	.slider-landing {
+				
+		.bg-slider-06 { background-image: url($img-bg-hero-landing-06-mobile);};
+		.bg-slider-07 { background-image: url($img-bg-hero-landing-07-mobile);};
+		.bg-slider-08 { background-image: url($img-bg-hero-landing-08-mobile);};
+		.bg-slider-09 { background-image: url($img-bg-hero-landing-09-mobile);};
+		.bg-slider-10 { background-image: url($img-bg-hero-landing-10-mobile);};
+		.bg-slider-11 { background-image: url($img-bg-hero-landing-11-mobile);};
+		.bg-slider-12 { background-image: url($img-bg-hero-landing-12-mobile);};
+		.bg-slider-13 { background-image: url($img-bg-hero-landing-13-mobile);};
+		.bg-slider-14 { background-image: url($img-bg-hero-landing-14-mobile);};
+		.bg-slider-15 { background-image: url($img-bg-hero-landing-15-mobile);};
+		.bg-slider-16 { background-image: url($img-bg-hero-landing-16-mobile);};
+		.bg-slider-17 { background-image: url($img-bg-hero-landing-17-mobile);};
+		
+	}
+
+	[data-locked="true"] & { 
+		.slider-landing {
+			.bg-slider-06 { background-image: url($img-bg-hero-landing-06);};
+			.bg-slider-07 { background-image: url($img-bg-hero-landing-07);};
+			.bg-slider-08 { background-image: url($img-bg-hero-landing-08);};
+			.bg-slider-09 { background-image: url($img-bg-hero-landing-09);};
+			.bg-slider-10 { background-image: url($img-bg-hero-landing-10);};
+			.bg-slider-11 { background-image: url($img-bg-hero-landing-11);};
+			.bg-slider-12 { background-image: url($img-bg-hero-landing-12);};
+			.bg-slider-13 { background-image: url($img-bg-hero-landing-13);};
+			.bg-slider-14 { background-image: url($img-bg-hero-landing-14);};
+			.bg-slider-15 { background-image: url($img-bg-hero-landing-15);};
+			.bg-slider-16 { background-image: url($img-bg-hero-landing-16);};
+			.bg-slider-17 { background-image: url($img-bg-hero-landing-17);};
+		
+		}
+	}
+}

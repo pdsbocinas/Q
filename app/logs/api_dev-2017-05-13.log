@@ -1,0 +1,2 @@
+[2017-05-13 18:22:40] api.INFO: A Curl Service request was executed. LogCode: 1998bc83. {"LogCode":"1998bc83","ApiEndpoint":"utils/channels","Params":"deleted=0","ProfileId":null} []
+[2017-05-13 18:23:41] api.INFO: A Curl Service request was executed. LogCode: e92e40aa. {"LogCode":"e92e40aa","ApiEndpoint":"utils/channels","Params":"deleted=0","ProfileId":null} []
